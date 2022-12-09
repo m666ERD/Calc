@@ -9,39 +9,35 @@ public class Calc {
                             "Умножение(*)\n"+
                             "Деление(/)\n"+
                             "Сложение(+)\n"+
-                            "Возведение в квадрат(^)\n"+
+                            "Возведение в степень(^)\n"+
                             "Вычитание(-)");
         String b = in.nextLine();
-        System.out.println("Введите первое число ");
+        System.out.println("Введите первое значение ");
         int a = in.nextInt();
         in.nextLine();
 
+        System.out.println("Введите второе значение");
+        int c = in.nextInt();
+        in.nextLine();
 
-            if (b.equals("^")) {
-                System.out.println(a*a);
-            }
+        if (b.equals("*")) {
+            System.out.println(a * c);
+        }
 
-            else {
-                System.out.println("Введите второе число");
-                int c = in.nextInt();
-                in.nextLine();
+        if (b.equals("/")) {
+            System.out.println(a / c);
+        }
 
-                if (b.equals("*")) {
-                    System.out.println(a * c);
-                }
+        if (b.equals("+")) {
+            System.out.println(a + c);
+        }
 
-                if (b.equals("/")) {
-                    System.out.println(a / c);
-                }
+        if (b.equals("-")) {
+            System.out.println(a - c);
+        }
 
-                if (b.equals("+")) {
-                    System.out.println(a + c);
-                }
-
-                if (b.equals("-")) {
-                    System.out.println(a - c);
-                }
-            }
+        if (b.equals("^")) {
+            System.out.println(Math.pow(a, c));
+        }
     }
-
 }
